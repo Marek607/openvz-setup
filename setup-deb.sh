@@ -44,10 +44,11 @@ apt-get -y install vzctl vzquota ploop vzstats
 
 # Download templates
 
-wget -P /vz/template/cache http://download.openvz.org/template/precreated/centos-6-x86.tar.gz
-wget -P /vz/template/cache http://download.openvz.org/template/precreated/debian-7.0-x86.tar.gz
-wget -P /vz/template/cache http://download.openvz.org/template/precreated/ubuntu-12.04-x86.tar.gz
-wget -P /vz/template/cache http://download.openvz.org/template/precreated/ubuntu-13.10-x86.tar.gz
+wget -P /vz/template/cache http://download.openvz.org/template/precreated/debian-7.0-x86_64.tar.gz
+wget -P /vz/template/cache http://download.openvz.org/template/precreated/debian-8.0-x86_64.tar.gz
+wget -P /vz/template/cache http://download.openvz.org/template/precreated/debian-8.0-x86_64-minimal.tar.gz
+wget -P /vz/template/cache http://download.openvz.org/template/precreated/centos-6-x86_64-minimal.tar.gz
+wget -P /vz/template/cache http://download.openvz.org/template/precreated/centos-7-x86_64-minimal.tar.gz
 
 # Update grub conf
 
@@ -62,8 +63,8 @@ update-grub
 # Announcements
 
 echo $'OpenVZ has now been setup and configured\n'
-echo $'Four OpenVZ templates have been added to the system:\n'
-echo $'centos-6-x86\ndebian-7.0-x86\nubuntu-12.04-x86\nubuntu-13.10-x86\n'
+echo $'Five OpenVZ templates have been added to the system:\n'
+echo $'centos-6-x86_64\ndebian-7.0-x86_64\nubuntu-12.04-x86\nubuntu-13.10-x86\n'
 
 # Reboot System : Ah crap, unable to figure out key input, wait for it...
 
