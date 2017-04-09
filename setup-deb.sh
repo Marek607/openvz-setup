@@ -60,7 +60,7 @@ update-grub
 
 # Modify default kernel to OpenVZ
 
-sed -i 'GRUB_DEFAULT=0/GRUB_DEFAULT=2/g' /etc/default/grub
+sed -i 's/GRUB_DEFAULT=0/GRUB_DEFAULT=2/g' /etc/default/grub
 
 update-grub
 
