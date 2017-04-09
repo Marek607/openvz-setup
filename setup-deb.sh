@@ -24,6 +24,10 @@ apt-key add archive.key
 apt-get update
 
 # Install OpenVZ Kernel
+apt-get -y install rsync
+rsync -avr /var/lib/vz/* /vz/
+rm -fr /var/lib/vz
+ln -s /vz /var/lib/vz
 
 apt-get -y install linux-image-openvz-amd64
 
