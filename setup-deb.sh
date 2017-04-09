@@ -73,5 +73,6 @@ echo $'centos-6-x86_64\ndebian-7.0-x86_64\nubuntu-12.04-x86\nubuntu-13.10-x86\n'
 # Reboot System : Ah crap, unable to figure out key input, wait for it...
 
 echo $'The system must go down for reboot now, you will be disconnected shortly'
+echo $'reboot'
 
 reboot
