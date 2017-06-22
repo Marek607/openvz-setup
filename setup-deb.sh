@@ -23,12 +23,7 @@ apt-key add archive.key
 
 apt-get update
 
-# Install OpenVZ Kernel
-apt-get -y install rsync
-rsync -avr /var/lib/vz/* /vz/
-rm -fr /var/lib/vz
-ln -s /vz /var/lib/vz
-
+# Imstall openvz image
 apt-get -y install linux-image-openvz-amd64
 
 # System configuration
@@ -63,6 +58,12 @@ update-grub
 sed -i 's/GRUB_DEFAULT=0/GRUB_DEFAULT=2/g' /etc/default/grub
 
 update-grub
+
+# Symlink vz
+apt-get -y install rsync
+rsync -avr /var/lib/vz/* /vz/
+rm -fr /var/lib/vz
+ln -s /vz /var/lib/vz
 
 # Announcements
 
