@@ -59,12 +59,6 @@ sed -i 's/GRUB_DEFAULT=0/GRUB_DEFAULT=2/g' /etc/default/grub
 
 update-grub
 
-# Symlink vz
-apt-get -y install rsync
-rsync -avr /var/lib/vz/* /vz/
-rm -fr /var/lib/vz
-ln -s /vz /var/lib/vz
-
 # Announcements
 
 echo $'OpenVZ has now been setup and configured\n'
@@ -77,3 +71,9 @@ echo $'The system must go down for reboot now, you will be disconnected shortly'
 echo $'reboot'
 
 reboot
+
+# Symlink vz
+apt-get -y install rsync
+rsync -avr /var/lib/vz/* /vz/
+rm -fr /var/lib/vz
+ln -s /vz /var/lib/vz
