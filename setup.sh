@@ -22,9 +22,7 @@ echo "SELINUX=disabled" > /etc/sysconfig/selinux
 
 # Install VZ Tools
 
-yum -y install vzctl
-yum -y install vzquota
-yum -y install ploop
+yum -y install vzctl vzquota ploop
 
 # Download templates
 
